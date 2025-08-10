@@ -1,0 +1,20 @@
+#include<graphics.h>
+#include <iostream.h>
+#include<math.h>
+
+using namespace std;
+
+int main( )
+{
+    initwindow(800, 600, "Shapes");
+    setcolor(3);
+    setfillstyle(SOLID_FILL,RED);
+    bar(50, 50, 590, 430);
+    
+    setfillstyle(1, 14);
+    bar(100, 100, 540, 380);
+
+   getch();
+   closegraph();
+
+}

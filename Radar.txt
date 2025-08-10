@@ -1,0 +1,46 @@
+#include<graphics.h>
+#include <iostream>
+using namespace std;
+
+int ScreenHeight=600;
+int ScreenWidth=600;
+
+int main( )
+{
+     
+initwindow(ScreenWidth, ScreenHeight, "RADAR");
+int x=300;
+int y=200;
+int sa=0;
+int ea=90;
+int step=0;
+int radius=100;
+
+ setlinestyle( 0, 0,1 );
+
+    do
+    {
+
+        step=step+1;
+        setcolor(15);
+        setfillstyle(1,GREEN);
+        pieslice(x,y,sa+step,ea+step,radius);
+        setfillstyle(1,YELLOW);
+        pieslice(x+radius,y+radius+65,sa+step,ea+step*2,radius-10);
+
+        delay(30);
+
+        setcolor(0);
+        setfillstyle(1,0);
+        pieslice(x,y,sa+step,ea+step,radius);  
+        pieslice(x+radius,y+radius+65,sa+step,ea+step*2,radius-10);   
+ 
+     
+      if (ea>360)  {sa=0;ea=90;step=0;}
+    }  while(x<=ScreenWidth);
+ 
+   getch();
+   closegraph();
+
+}
+
