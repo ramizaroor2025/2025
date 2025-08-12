@@ -1,0 +1,30 @@
+#include<graphics.h> 
+#include<conio.h>
+
+ int main() {    int gd = DETECT, gm;  
+   initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+   
+initwindow(800,600); 
+   
+line(80,350,450,350);  
+setcolor(11);
+
+setcolor(2);
+
+circle(150, 320, 29); 
+circle(350, 320, 29);
+
+line(200, 250, 300, 250);    
+line(300, 250, 250, 150);   
+line(250, 150, 200, 250); 
+  
+      
+line(100,100,400,100);
+line(100,100,100,290); 
+line(100,290,400,290); 
+line(400,100,400,290);
+
+ getch();  
+ closegraph();
+ return 0;  }
+
