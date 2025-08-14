@@ -1,0 +1,114 @@
+رسم قوس مركزه النقطة 240 320 وزاوية البداية 0 وزاوية النهائية 45 ونصف القطر 100
+
+include <graphics.h> 
+#include <conio.h> 
+ main() 
+{   int gd = DETECT, gm; 
+    initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+    arc(320, 240, 0, 45, 100); 
+    getch(); 
+   closegraph();   return 0;    }
+
+
+
+كتابة عبارة mobeto example عند النقطة 100 100 ثم انقل المشيرة الى موقع جديد 150 100 الدالة moverel 
+
+#include <graphics.h> 
+#include <conio.h> 
+ main() 
+{   int gd = DETECT, gm, x, y; 
+     initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+    moveto(100, 100); 
+   outtext("Moveto Example"); 
+   moverel(0, 50); 
+   outtext("Moverel Example");  
+    getch(); 
+   closegraph(); 
+   return 0;} 
+
+
+
+رسم مربع بلون اصفر طول ضلعه 50 مبتدا من 100 100 بدالة linerel  
+#include <graphics.h> 
+#include <conio.h> 
+ main() 
+{   int gd = DETECT, gm; 
+    initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+      setcolor(YELLOW); 
+      moveto(100, 100); 
+      linerel(50, 0); 
+      linerel(0, 50); 
+      linerel(-50, 0); 
+      linerel(0, -50); 
+        getch(); 
+   closegraph(); 
+   return 0;} 
+
+
+رسم مستطيل احمر دالة moveto lineto احداثيات علوية يسرى 100 1000 ويمنى 200 280 وعبارة done yb بلون اصفر 
+
+#include<graphics.h> 
+#include<conio.h> 
+ main() 
+{   int gd = DETECT, gm; 
+      initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+      setcolor(14); 
+      moveto(120, 150); 
+      outtext("done by lineto()"); 
+      setcolor(4); 
+
+
+كتابة جامعة القدس المفتوحة بلون ابيض داخل مستطيل احمر ومعبا ازرق 100 100 ويمنى 200 300 
+
+#include <graphics.h> 
+#include <conio.h> 
+main() 
+{   int gd = DETECT, gm;   
+   initgraph(&gd, &gm, "C:\\TC\\BGI"); 
+    setcolor(RED); 
+   setfillcolor(SOLID_FILL, BLUE); 
+   rectangle(100, 100, 300, 200) 
+   floodfill(110, 110, 4); 
+   moveto(110, 140); 
+   setcolor(15); 
+   outtext("Alquds Open University"); 
+    getch(); 
+   closegraph();   return 0;    }
+
+
+عبارة text whit diffrent fonts بشكل افقي خطوط مختلفة 
+
+#include <graphics.h> 
+#include <conio.h> 
+main() 
+{       int gd = DETECT, gm, x = 25, y = 25, font; 
+    initgraph(&gd,&gm,"C:\\TC\\BGI"); 
+    for (font = 0; font <= 10; font++) 
+   { 
+      settextstyle(font, HORIZ_DIR, font); 
+      outtextxy(x, y, "Text with different fonts"); 
+      y = y + 25; 
+   } 
+    getch(); 
+   closegraph(); 
+   return 0;  } 
+
+كتابة نص outtexy function بلون احمرعند 100 100 باستخدام دالة outtextxy 
+
+
+#include<graphics.h> 
+#include<conio.h> 
+main() 
+{ 
+   int gd = DETECT, gm; 
+  
+   initgraph(&gd,&gm,"C:\\TC\\BGI"); 
+   setcolor(4); 
+   outtextxy(100, 100, "Outtextxy function"); 
+   getch(); 
+   closegraph(); 
+   return 0; 
+}
+
+
+
