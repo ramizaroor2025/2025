@@ -1,3 +1,4 @@
+مربع بداخله مثلث 
 #include<graphics.h> 
 #include<conio.h>
 
@@ -27,4 +28,5 @@ line(400,100,400,290);
  getch();  
  closegraph();
  return 0;  }
+
 
